@@ -1,0 +1,26 @@
+{
+  "name": "gilded-rose-js",
+  "version": "1.0.0",
+  "description": "If you want to get cracking on the JavaScript source then do this:",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Groxalf/gilded-rose-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Groxalf/gilded-rose-javascript/issues"
+  },
+  "homepage": "https://github.com/Groxalf/gilded-rose-javascript#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
