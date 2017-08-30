@@ -1,7 +1,7 @@
-module.exports = function SulfurasItem(sell_in, quality) {
-    return {
-        sell_in,
-        quality,
-        age: () => {}
-    }
+module.exports = function SulfurasItem(name, sell_in, quality) {
+    this.name = name;
+    this.sell_in = sell_in;
+    this.quality = quality;
+    
+    this.age = () => {};
 }

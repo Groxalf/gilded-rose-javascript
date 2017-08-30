@@ -7,7 +7,7 @@ describe("In the Gilded Rose", () => {
   function anItem({name, sell_in, quality} = {}) {
     return Item(name, sell_in, quality)
   }
-  
+
   describe("A regular item", () => {
     it("degrades its quality when a day passes", () => {
       const item = anItem({name: 'Regular Item', sell_in: 10, quality: 20});
@@ -34,7 +34,7 @@ describe("In the Gilded Rose", () => {
     });
   });
 
-  describe("The Aged Brie item", () => {
+  describe.only("The Aged Brie item", () => {
     it("increases its quality when a day passes", () => {
       const item = anItem({name: 'Aged Brie', sell_in: 10, quality: 20});
       update_quality([item]);

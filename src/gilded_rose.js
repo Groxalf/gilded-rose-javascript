@@ -1,7 +1,7 @@
 module.exports = {
   update_quality(items) {
     for (var i = 0; i < items.length; i++) {
-      if (items[i].name === 'Sulfuras Hand of Ragnaros') {
+      if (items[i].name === 'Sulfuras Hand of Ragnaros' || items[i].name === 'Aged Brie') {
         items[i].age();
         continue;
       }
