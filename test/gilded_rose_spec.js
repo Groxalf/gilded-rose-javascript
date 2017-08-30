@@ -67,4 +67,18 @@ describe("In the Gilded Rose", () => {
       expect(item.sell_in).to.equal(0);
     });
   });
+
+  describe("The Sulfuras Hand of Ragnaros item", () => {
+    it("never gets altered its quality when a day passes", () => {
+      const item = anItem({name: 'Sulfuras, Hand of Ragnaros', sell_in: 0, quality: 80});
+      update_quality([item]);
+      expect(item.quality).to.equal(80);
+    });
+
+    it("never gets altered its selling day when a day passes", () => {
+      const item = anItem({name: 'Sulfuras, Hand of Ragnaros', sell_in: 0, quality: 80});
+      update_quality([item]);
+      expect(item.sell_in).to.equal(0);
+    });
+  });
 });
