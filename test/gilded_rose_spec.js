@@ -6,16 +6,8 @@ const Item = require('../src/item')
 describe("In the Gilded Rose", () => {
   function anItem({name, sell_in, quality} = {}) {
     return Item(name, sell_in, quality)
-  }  
-  const allItems = []
+  }
   
-  allItems.push(anItem({name: '+5 Dexterity Vest', sell_in: 10, quality: 20}));
-  allItems.push(anItem({name: 'Aged Brie', sell_in: 2, quality: 0}));
-  allItems.push(anItem({name: 'Elixir of the Mongoose', sell_in: 5, quality: 7}));
-  allItems.push(anItem({name: 'Sulfuras, Hand of Ragnaros', sell_in: 0, quality: 80}));
-  allItems.push(anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 15, quality: 20}));
-  allItems.push(anItem({name: 'Conjured Mana Cake', sell_in: 3, quality: 6}));
-
   describe("A regular item", () => {
     it("degrades its quality when a day passes", () => {
       const item = anItem({name: 'Regular Item', sell_in: 10, quality: 20});
