@@ -34,7 +34,7 @@ describe("In the Gilded Rose", () => {
     });
   });
 
-  describe.only("The Aged Brie item", () => {
+  describe("The Aged Brie item", () => {
     it("increases its quality when a day passes", () => {
       const item = anItem({name: 'Aged Brie', sell_in: 10, quality: 20});
       update_quality([item]);
