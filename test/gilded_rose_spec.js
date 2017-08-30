@@ -81,4 +81,36 @@ describe("In the Gilded Rose", () => {
       expect(item.sell_in).to.equal(0);
     });
   });
+
+  describe("Backstage passes to a TAFKAL80ETC concert item", () => {
+    it("increases its quality when its selling day is greater or equal than 10 days to expire", () => {
+      const item = anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 15, quality: 20});
+      update_quality([item]);
+      expect(item.quality).to.equal(21);
+    });
+
+    it("increases its quality twice when its selling day is greater or equal than 10 days to expire", () => {
+      const item = anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 10, quality: 20});
+      update_quality([item]);
+      expect(item.quality).to.equal(22);
+    });
+
+    it("increases its quality by three times when its selling day is greater or equal than 5 days to expire", () => {
+      const item = anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 5, quality: 20});
+      update_quality([item]);
+      expect(item.quality).to.equal(23);
+    });
+
+    it("quality drops to zero when selling day passes", () => {
+      const item = anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 0, quality: 20});
+      update_quality([item]);
+      expect(item.quality).to.equal(0);
+    });
+
+    it("decrease selling day by one when day passes", () => {
+      const item = anItem({name: 'Backstage passes to a TAFKAL80ETC concert', sell_in: 1, quality: 20});
+      update_quality([item]);
+      expect(item.sell_in).to.equal(0);
+    });
+  });
 });
